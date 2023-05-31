@@ -1,0 +1,78 @@
+@use '../abstracts' as *;
+
+footer {
+  background-color: $color-sc;
+  padding-block: 3.125em;
+
+  @include largeSize {
+    padding-block: 4.75em;
+    padding-inline: 50px;
+  }
+}
+footer .footer-container {
+  text-align: center;
+  padding-inline: 1.5em;
+  max-width: 800px;
+  margin-inline: auto;
+
+  @include middleSize {
+    padding: 1.5em 4em;
+  }
+}
+
+.footer-content h4 {
+  font-size: $fs-sm;
+  line-height: 1.272em;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content p {
+  font-size: 0.875rem;
+  line-height: 1.428em;
+  margin-block: 1.714em;
+}
+
+footer form {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  margin-block: 2.5em;
+
+  @include middleSize {
+    margin-block: 3.125em;
+  }
+}
+
+footer label {
+  position: absolute;
+  left: -1000px;
+}
+
+footer input {
+  font-family: inherit;
+  font-size: 100%;
+  color: #fff;
+  background-color: transparent;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.5em 0.25em 0.5em 1.5em;
+}
+
+::placeholder {
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.875em;
+}
+
+form button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}

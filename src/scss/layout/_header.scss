@@ -1,0 +1,43 @@
+@use '../abstracts/mixin' as *;
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 24px 16px;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+
+  @include largeSize {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+header ul {
+  display: flex;
+}
+
+header ul a {
+  padding: 1em;
+
+  @include middleSize {
+    font-size: 1.125rem;
+  }
+}
+
+header ul a:hover {
+  font-weight: bold;
+}
+
+header .start-jr {
+  display: none;
+}

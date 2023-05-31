@@ -1,0 +1,28 @@
+$sm-size: 31.25rem;
+$sm-size-2: 31.25rem;
+$md-size: 43.75rem;
+$lg-size: 66.875rem;
+
+@mixin smallSize() {
+  @media (max-width: #{$sm-size}) {
+    @content;
+  }
+}
+
+@mixin smallSize2() {
+  @media (min-width: #{$sm-size-2}) {
+    @content;
+  }
+}
+
+@mixin middleSize() {
+  @media (min-width: #{$md-size}) {
+    @content;
+  }
+}
+
+@mixin largeSize() {
+  @media (min-width: #{$lg-size}) {
+    @content;
+  }
+}

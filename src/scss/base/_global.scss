@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Montserrat:ital,wght@0,300;0,400;0,500;1,400&family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #fff;
+  background-color: $color-pr;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em 1em;
+
+  @include middleSize {
+    padding: 1.5em 4em;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #252b42;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #98a6bd;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #838ea1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
