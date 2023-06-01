@@ -892,8 +892,6 @@
 }
 
 .testimonial-cards {
-  margin-bottom: 1.5em;
-
   @include smallSize2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, auto));
@@ -914,6 +912,7 @@
   color: #000;
   background-color: #fff;
   padding: 3em;
+  margin-bottom: 1.5em;
   box-shadow: 0 8px 10px rgba(255, 255, 255, 0.4);
   opacity: 0;
   transition: opacity 2.5s ease;
