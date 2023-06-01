@@ -172,8 +172,8 @@
 .contact-us-wrapper::after {
   content: '';
   position: absolute;
-  right: -40px;
-  bottom: 280px;
+  right: -2.5em;
+  bottom: 18.75em;
   position: absolute;
   z-index: -1;
   width: 7.5em;
@@ -181,10 +181,15 @@
   background-color: rgba(49, 137, 173, 0.5);
   filter: blur(60px);
 
+  @include middleSize {
+    bottom: 25em;
+  }
+
   @include largeSize {
     width: 10.625em;
     height: 10.625em;
-    right: -80px;
+    right: -7.5em;
+    bottom: 16em;
   }
 }
 

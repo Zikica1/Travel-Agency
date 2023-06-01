@@ -1911,15 +1911,22 @@ footer nav ul {
   filter: blur(60px);
   background-color: #3189ad80;
   position: absolute;
-  bottom: 280px;
-  right: -40px;
+  bottom: 18.75em;
+  right: -2.5em;
+}
+
+@media (width >= 43.75rem) {
+  .contact-us-wrapper:after {
+    bottom: 25em;
+  }
 }
 
 @media (width >= 66.875rem) {
   .contact-us-wrapper:after {
     width: 10.625em;
     height: 10.625em;
-    right: -80px;
+    bottom: 16em;
+    right: -7.5em;
   }
 }
 
