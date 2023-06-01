@@ -6,6 +6,10 @@
 .slide-content {
   width: 100%;
   height: 95vh;
+
+  @include smallSize2 {
+    height: 100vh;
+  }
 }
 
 .hero {
