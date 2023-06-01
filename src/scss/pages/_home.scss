@@ -920,6 +920,7 @@
   @include smallSize2 {
     width: 23.125em;
     margin-inline: auto;
+    margin-bottom: 0;
   }
 
   @include middleSize {
