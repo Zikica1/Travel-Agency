@@ -1,0 +1,398 @@
+@use '../abstracts' as *;
+@use '../components/buttons' as *;
+
+.header-sec {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  transition: 0.6s ease-out;
+  padding: 0;
+}
+
+.header-sec.sticky {
+  background-color: rgba(192, 192, 192, 0.1);
+  box-shadow: 0px 0px 20px rgba(58, 58, 58, 0.8);
+}
+
+.header-container {
+  position: relative;
+  max-width: 1200px;
+  height: calc(4em + 1em);
+  margin-inline: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-out;
+  padding: 1.5em 1em;
+
+  @include middleSize {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5em 4em;
+  }
+}
+
+.header-sec.sticky .header-container {
+  height: calc(2.5em + 1em);
+}
+
+/* west-bay-hero */
+.west-bay-hero {
+  width: 100%;
+  height: 25em;
+  background: rgba(0, 0, 0, 0.4) url(../img/west-bay-2.jpg) no-repeat center
+    center/cover;
+  background-blend-mode: darken;
+}
+
+.west-bay-content {
+  margin-top: 12em;
+}
+
+.west-bay-content h1 {
+  font-size: $fs-lg;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.25;
+  margin-block: 0.5em;
+
+  @include middleSize {
+    font-size: $fs-xxl;
+    line-height: 1.18em;
+  }
+}
+
+/* west-bay-about */
+.west-bay-about {
+  background-color: $color-sc;
+}
+
+.west-bay-wrapper {
+  max-width: 100vw;
+  width: 100vw;
+  margin: 0 calc(-50vw + 50%);
+  padding: 24px 16px;
+  background: linear-gradient(180deg, #157e91, #55b5c5);
+  margin-block: -1.5em 1.5em;
+
+  @include middleSize2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    align-items: center;
+  }
+}
+
+.west-bay-wrapper h3 {
+  font-size: $fs-md;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.33;
+  margin-block: 1em;
+
+  @include largeSize {
+    font-size: $fs-lg;
+  }
+}
+
+.west-bay-about p {
+  margin-bottom: 1em;
+}
+
+/* things-to-do */
+.things-to-do h3,
+.parks-beaches h3 {
+  display: inline-block;
+  position: relative;
+  font-size: $fs-md;
+  line-height: 1.33;
+  margin-block: 0 1em;
+  padding-block: 5px;
+}
+
+.things-to-do h3::after,
+.parks-beaches h3::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background-color: $color-tr;
+}
+
+/*thing cards */
+.things-to-do-wrapper {
+  @include middleSize {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.thing-card {
+  position: relative;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.14);
+
+  @include middleSize {
+    margin-bottom: 0;
+    flex: 1 1 33%;
+  }
+}
+
+.thing-card:last-child {
+  margin-bottom: 0;
+}
+
+.thing-card::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: $color-tr;
+  bottom: 0;
+  left: 0;
+  transform: scale(0, 1);
+  transform-origin: 0 100%;
+  transition: transform 0.3s ease-out;
+}
+
+.thing-card:hover::after {
+  transform: scale(1, 1);
+}
+
+.thing-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thing-card p {
+  display: none;
+
+  @include middleSize {
+    display: block;
+  }
+}
+
+.thing-content {
+  color: #333;
+  background-color: #fff;
+  padding: 1em;
+
+  @include middleSize {
+    flex: 1;
+  }
+}
+
+.thing-content span {
+  color: $color-tr;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.thing-content h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: $fs-xsm;
+  margin-block: 0.22em 0.89em;
+}
+
+.thing-1-img,
+.thing-2-img,
+.thing-3-img {
+  overflow: hidden;
+}
+
+.thing-card img {
+  transition: transform 0.3s ease;
+}
+
+.thing-card:hover img {
+  transform: scale(1.1);
+}
+
+.thing-card-1 {
+  max-width: 100vw;
+  width: 100vw;
+  margin: 0 calc(-50vw + 50%);
+  margin-bottom: 1.5em;
+
+  @include middleSize {
+    margin: 0;
+    width: unset;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.thing-card-2,
+.thing-card-3 {
+  display: flex;
+
+  @include middleSize {
+    flex-direction: column;
+  }
+}
+
+.thing-card-2 .thing-content,
+.thing-card-3 .thing-content {
+  flex: 2;
+
+  @include middleSize {
+    flex: 1;
+  }
+}
+
+.thing-card-2 .thing-2-img,
+.thing-card-3 .thing-3-img {
+  flex: 1;
+  order: 2;
+
+  @include middleSize {
+    order: 0;
+    height: 170px;
+    flex: unset;
+    flex-shrink: 0;
+  }
+}
+
+.thing-card-1 .thing-1-img {
+  @include middleSize {
+    height: 170px;
+    flex-shrink: 0;
+  }
+}
+
+/* parks and beaches */
+.parks-beaches-wrapper {
+  @include middleSize {
+    display: flex;
+    gap: 1.5em;
+  }
+}
+.park-beach {
+  position: relative;
+  margin-bottom: 1.5em;
+
+  @include middleSize {
+    flex: 1 1 33%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.park-beach::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: $color-tr;
+  left: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: 0 100%;
+  transition: transform 0.3s ease-out;
+}
+
+.park-beach:hover::after {
+  transform: scale(1, 1);
+}
+
+.park-beach-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.park-beach-text {
+  color: #333;
+  background-color: #fff;
+  padding: 1em;
+}
+
+.park-beach-text span {
+  color: $color-tr;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.park-beach-text h4 {
+  color: #333;
+  font-size: $fs-xsm;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-block: 0.22em 0.89em;
+}
+
+.park-beach-text p {
+  display: none;
+
+  @include middleSize {
+    display: block;
+  }
+}
+
+.park-beach-img {
+  overflow: hidden;
+
+  @include middleSize {
+    height: 170px;
+    flex-shrink: 0;
+  }
+}
+
+.park-beach-img img {
+  transition: transform 0.3s ease-out;
+}
+
+.park-beach:hover img {
+  transform: scale(1.1);
+}
+
+.park-beach-1 {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 calc(-50vw + 50%);
+  margin-bottom: 1.5em;
+
+  @include middleSize {
+    width: unset;
+    max-width: unset;
+    margin: 0;
+  }
+}
+
+.park-beach-2,
+.park-beach-3 {
+  display: flex;
+  justify-content: space-between;
+
+  @include middleSize {
+    flex-direction: column;
+  }
+}
+
+.park-beach-img {
+  flex: 1;
+  order: 2;
+
+  @include middleSize {
+    order: 0;
+    flex: unset;
+  }
+}
+
+.park-beach-text {
+  flex: 2;
+
+  @include middleSize {
+    flex: 1;
+  }
+}

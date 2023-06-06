@@ -216,7 +216,13 @@ footer nav ul {
 
 .hero, .slider, .slide-content {
   width: 100%;
-  height: 100vh;
+  height: 95vh;
+}
+
+@media (width >= 31.25rem) {
+  .hero, .slider, .slide-content {
+    height: 100vh;
+  }
 }
 
 .hero {
@@ -494,7 +500,7 @@ footer nav ul {
 .hero .loader {
   z-index: 100000;
   width: 85%;
-  height: 85vh;
+  height: 95vh;
   visibility: hidden;
   background-color: #000a0d;
   border-radius: 20px;
@@ -557,7 +563,7 @@ footer nav ul {
   font-style: italic;
   position: absolute;
   top: 50%;
-  right: -45%;
+  right: -55%;
   transform: rotate(90deg);
 }
 
@@ -739,10 +745,8 @@ footer nav ul {
   }
 }
 
-@media (width >= 43.75rem) {
-  .destination-wrapper li:hover {
-    transform: scale(1.1);
-  }
+.destination-wrapper li:hover {
+  transform: scale(.98);
 }
 
 .destination-wrapper li.show-card {
@@ -777,6 +781,7 @@ footer nav ul {
 }
 
 .destination-content h3 {
+  color: #333;
   margin-bottom: .854em;
   font-family: Poppins, sans-serif;
 }
@@ -1206,6 +1211,7 @@ footer nav ul {
   color: #000;
   opacity: 0;
   background-color: #fff;
+  margin-bottom: 1.5em;
   padding: 3em;
   transition: opacity 2.5s;
   box-shadow: 0 8px 10px #fff6;
@@ -1215,6 +1221,7 @@ footer nav ul {
   .testimonial-cards .card {
     width: 23.125em;
     margin-inline: auto;
+    margin-bottom: 0;
   }
 }
 
@@ -2153,6 +2160,422 @@ footer nav ul {
   font-family: Poppins, sans-serif;
   font-size: 1.375rem;
   line-height: 1.27em;
+}
+
+.header-sec {
+  z-index: 999;
+  width: 100%;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 0;
+  transition: all .6s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header-sec.sticky {
+  background-color: #c0c0c01a;
+  box-shadow: 0 0 20px #3a3a3acc;
+}
+
+.header-container {
+  max-width: 1200px;
+  height: 5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  padding: 1.5em 1em;
+  transition: all .5s ease-out;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (width >= 43.75rem) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5em 4em;
+  }
+}
+
+.header-sec.sticky .header-container {
+  height: 3.5em;
+}
+
+.west-bay-hero {
+  width: 100%;
+  height: 25em;
+  background-blend-mode: darken;
+  background: #0006 url("west-bay-2.0cd64861.jpg") center / cover no-repeat;
+}
+
+.west-bay-content {
+  margin-top: 12em;
+}
+
+.west-bay-content h1 {
+  margin-block: .5em;
+  font-family: Poppins, sans-serif;
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+@media (width >= 43.75rem) {
+  .west-bay-content h1 {
+    font-size: 2.8125rem;
+    line-height: 1.18em;
+  }
+}
+
+.west-bay-about {
+  background-color: #1f252e;
+}
+
+.west-bay-wrapper {
+  max-width: 100vw;
+  width: 100vw;
+  background: linear-gradient(#157e91, #55b5c5);
+  margin: 0 calc(50% - 50vw);
+  margin-block: -1.5em 1.5em;
+  padding: 24px 16px;
+}
+
+@media (width >= 55rem) {
+  .west-bay-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5em;
+    display: grid;
+  }
+}
+
+.west-bay-wrapper h3 {
+  margin-block: 1em;
+  font-family: Poppins, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+
+@media (width >= 66.875rem) {
+  .west-bay-wrapper h3 {
+    font-size: 2rem;
+  }
+}
+
+.west-bay-about p {
+  margin-bottom: 1em;
+}
+
+.things-to-do h3, .parks-beaches h3 {
+  margin-block: 0 1em;
+  padding-block: 5px;
+  font-size: 1.5rem;
+  line-height: 1.33;
+  display: inline-block;
+  position: relative;
+}
+
+.things-to-do h3:after, .parks-beaches h3:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #157e91;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media (width >= 43.75rem) {
+  .things-to-do-wrapper {
+    gap: 24px;
+    display: flex;
+  }
+}
+
+.thing-card {
+  margin-bottom: 1.5em;
+  position: relative;
+  box-shadow: 0 2px 2px #ffffff24;
+}
+
+@media (width >= 43.75rem) {
+  .thing-card {
+    flex: 33%;
+    margin-bottom: 0;
+  }
+}
+
+.thing-card:last-child {
+  margin-bottom: 0;
+}
+
+.thing-card:after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  transform-origin: 0 100%;
+  background-color: #157e91;
+  transition: transform .3s ease-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0, 1);
+}
+
+.thing-card:hover:after {
+  transform: scale(1);
+}
+
+.thing-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thing-card p {
+  display: none;
+}
+
+@media (width >= 43.75rem) {
+  .thing-card p {
+    display: block;
+  }
+}
+
+.thing-content {
+  color: #333;
+  background-color: #fff;
+  padding: 1em;
+}
+
+@media (width >= 43.75rem) {
+  .thing-content {
+    flex: 1;
+  }
+}
+
+.thing-content span {
+  color: #157e91;
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.thing-content h4 {
+  margin-block: .22em .89em;
+  font-family: Poppins, sans-serif;
+  font-size: 1.125rem;
+}
+
+.thing-1-img, .thing-2-img, .thing-3-img {
+  overflow: hidden;
+}
+
+.thing-card img {
+  transition: transform .3s;
+}
+
+.thing-card:hover img {
+  transform: scale(1.1);
+}
+
+.thing-card-1 {
+  max-width: 100vw;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  margin-bottom: 1.5em;
+}
+
+@media (width >= 43.75rem) {
+  .thing-card-1 {
+    width: unset;
+    max-width: unset;
+    flex-direction: column;
+    margin: 0;
+    display: flex;
+  }
+}
+
+.thing-card-2, .thing-card-3 {
+  display: flex;
+}
+
+@media (width >= 43.75rem) {
+  .thing-card-2, .thing-card-3 {
+    flex-direction: column;
+  }
+}
+
+.thing-card-2 .thing-content, .thing-card-3 .thing-content {
+  flex: 2;
+}
+
+@media (width >= 43.75rem) {
+  .thing-card-2 .thing-content, .thing-card-3 .thing-content {
+    flex: 1;
+  }
+}
+
+.thing-card-2 .thing-2-img, .thing-card-3 .thing-3-img {
+  flex: 1;
+  order: 2;
+}
+
+@media (width >= 43.75rem) {
+  .thing-card-2 .thing-2-img, .thing-card-3 .thing-3-img {
+    height: 170px;
+    order: 0;
+    flex: unset;
+    flex-shrink: 0;
+  }
+
+  .thing-card-1 .thing-1-img {
+    height: 170px;
+    flex-shrink: 0;
+  }
+
+  .parks-beaches-wrapper {
+    gap: 1.5em;
+    display: flex;
+  }
+}
+
+.park-beach {
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+@media (width >= 43.75rem) {
+  .park-beach {
+    flex-direction: column;
+    flex: 33%;
+    margin-bottom: 0;
+    display: flex;
+  }
+}
+
+.park-beach:after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  transform-origin: 0 100%;
+  background-color: #157e91;
+  transition: transform .3s ease-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0, 1);
+}
+
+.park-beach:hover:after {
+  transform: scale(1);
+}
+
+.park-beach-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.park-beach-text {
+  color: #333;
+  background-color: #fff;
+  padding: 1em;
+}
+
+.park-beach-text span {
+  color: #157e91;
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.park-beach-text h4 {
+  color: #333;
+  margin-block: .22em .89em;
+  font-family: Poppins, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.park-beach-text p {
+  display: none;
+}
+
+@media (width >= 43.75rem) {
+  .park-beach-text p {
+    display: block;
+  }
+}
+
+.park-beach-img {
+  overflow: hidden;
+}
+
+@media (width >= 43.75rem) {
+  .park-beach-img {
+    height: 170px;
+    flex-shrink: 0;
+  }
+}
+
+.park-beach-img img {
+  transition: transform .3s ease-out;
+}
+
+.park-beach:hover img {
+  transform: scale(1.1);
+}
+
+.park-beach-1 {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  margin-bottom: 1.5em;
+}
+
+@media (width >= 43.75rem) {
+  .park-beach-1 {
+    width: unset;
+    max-width: unset;
+    margin: 0;
+  }
+}
+
+.park-beach-2, .park-beach-3 {
+  justify-content: space-between;
+  display: flex;
+}
+
+@media (width >= 43.75rem) {
+  .park-beach-2, .park-beach-3 {
+    flex-direction: column;
+  }
+}
+
+.park-beach-img {
+  flex: 1;
+  order: 2;
+}
+
+@media (width >= 43.75rem) {
+  .park-beach-img {
+    order: 0;
+    flex: unset;
+  }
+}
+
+.park-beach-text {
+  flex: 2;
+}
+
+@media (width >= 43.75rem) {
+  .park-beach-text {
+    flex: 1;
+  }
 }
 
 /*# sourceMappingURL=about.b10d73a7.css.map */

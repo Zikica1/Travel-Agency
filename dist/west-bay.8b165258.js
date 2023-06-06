@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"5Ns0z":[function(require,module,exports) {
+})({"71Ugw":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "f53ec1156c9f5b79";
+module.bundle.HMR_BUNDLE_ID = "4b081db68b165258";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -556,56 +556,8 @@ function hmrAccept(bundle, id) {
     });
 }
 
-},{}],"ivXNZ":[function(require,module,exports) {
-//Scroll to top
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "render", ()=>render);
-function render() {
-    const scrollTopBtn = document.querySelector(".scrollToTop-btn");
-    window.addEventListener("scroll", ()=>{
-        scrollTopBtn.classList.toggle("active", window.scrollY > 500);
-    });
-    scrollTopBtn.addEventListener("click", ()=>{
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    });
-}
-//Scroll to down
-window.addEventListener("scroll", ()=>{
-    document.querySelector(".header-sec").classList.toggle("sticky", window.scrollY > 0);
-});
+},{}],"1l27Q":[function(require,module,exports) {
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
+},{}]},["71Ugw","1l27Q"], "1l27Q", "parcelRequire56b7")
 
-},{}]},["5Ns0z"], null, "parcelRequire56b7")
-
-//# sourceMappingURL=global.6c9f5b79.js.map
+//# sourceMappingURL=west-bay.8b165258.js.map

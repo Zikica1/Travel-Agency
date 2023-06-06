@@ -487,10 +487,14 @@
   }
 }
 
+// .destination-wrapper li:hover {
+//   @include middleSize {
+//     transform: scale(1.1);
+//   }
+// }
+
 .destination-wrapper li:hover {
-  @include middleSize {
-    transform: scale(1.1);
-  }
+  transform: scale(0.98);
 }
 
 .destination-wrapper li.show-card {
@@ -530,6 +534,7 @@
 }
 
 .destination-content h3 {
+  color: #333;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 0.854em;
 }
