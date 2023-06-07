@@ -104,6 +104,49 @@ header .start-jr {
   display: none;
 }
 
+.header-sec {
+  z-index: 999;
+  width: 100%;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 0;
+  transition: all .6s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header-sec.sticky {
+  background-color: #c0c0c01a;
+  box-shadow: 0 0 20px #3a3a3acc;
+}
+
+.header-container {
+  max-width: 1200px;
+  height: 5.5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  padding: 1.5em 1em;
+  transition: all .5s ease-out;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (width >= 43.75rem) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5em 4em;
+  }
+}
+
+.header-sec.sticky .header-container {
+  height: 4.5em;
+}
+
 footer {
   background-color: #1f252e;
   padding-block: 3.125em;
@@ -1602,15 +1645,15 @@ footer nav ul {
 }
 
 .our-time-wrapper li:first-child {
-  transition-delay: .5s;
+  transition-delay: .4s;
 }
 
 .our-time-wrapper li:nth-child(2) {
-  transition-delay: 1s;
+  transition-delay: .8s;
 }
 
 .our-time-wrapper li:nth-child(3) {
-  transition-delay: 1.5s;
+  transition-delay: 1s;
 }
 
 .our-time-content {
@@ -1704,7 +1747,7 @@ footer nav ul {
 }
 
 .time-cards .time-card-3 {
-  transition-delay: 1.2s;
+  transition-delay: 1s;
 }
 
 .time-card img {
@@ -2162,49 +2205,6 @@ footer nav ul {
   line-height: 1.27em;
 }
 
-.header-sec {
-  z-index: 999;
-  width: 100%;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  padding: 0;
-  transition: all .6s ease-out;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.header-sec.sticky {
-  background-color: #c0c0c01a;
-  box-shadow: 0 0 20px #3a3a3acc;
-}
-
-.header-container {
-  max-width: 1200px;
-  height: 5em;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-inline: auto;
-  padding: 1.5em 1em;
-  transition: all .5s ease-out;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-
-@media (width >= 43.75rem) {
-  .header-container {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1.5em 4em;
-  }
-}
-
-.header-sec.sticky .header-container {
-  height: 3.5em;
-}
-
 .west-bay-hero {
   width: 100%;
   height: 25em;
@@ -2230,11 +2230,11 @@ footer nav ul {
   }
 }
 
-.west-bay-about {
+.destination-card-about {
   background-color: #1f252e;
 }
 
-.west-bay-wrapper {
+.destination-card-wrapper {
   max-width: 100vw;
   width: 100vw;
   background: linear-gradient(#157e91, #55b5c5);
@@ -2244,7 +2244,7 @@ footer nav ul {
 }
 
 @media (width >= 55rem) {
-  .west-bay-wrapper {
+  .destination-card-wrapper {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5em;
@@ -2252,7 +2252,7 @@ footer nav ul {
   }
 }
 
-.west-bay-wrapper h3 {
+.destination-card-wrapper h3 {
   margin-block: 1em;
   font-family: Poppins, sans-serif;
   font-size: 1.5rem;
@@ -2260,12 +2260,12 @@ footer nav ul {
 }
 
 @media (width >= 66.875rem) {
-  .west-bay-wrapper h3 {
+  .destination-card-wrapper h3 {
     font-size: 2rem;
   }
 }
 
-.west-bay-about p {
+.destination-card-about p {
   margin-bottom: 1em;
 }
 
@@ -2576,6 +2576,17 @@ footer nav ul {
   .park-beach-text {
     flex: 1;
   }
+}
+
+.varadero-hero {
+  width: 100%;
+  height: 25em;
+  background-blend-mode: darken;
+  background: #0006 url("varadero-hero-img-1.8ab14fd3.jpg") center / cover no-repeat;
+}
+
+.varadero-content {
+  margin-top: 12em;
 }
 
 /*# sourceMappingURL=about.b10d73a7.css.map */
