@@ -1,4 +1,28 @@
 @import "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Montserrat:ital,wght@0,300;0,400;0,500;1,400&family=Poppins:wght@400;500;600;700&display=swap";
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  50% {
+    transform: scale(1);
+  }
+}
+
 *, :after, :before {
   box-sizing: border-box;
   margin: 0;
@@ -16,6 +40,7 @@ body {
   background-color: #1a1d21;
   font-family: Montserrat, sans-serif;
   line-height: 1.6;
+  animation: .6s ease-out forwards transitionIn;
   overflow-x: hidden;
 }
 
@@ -697,18 +722,6 @@ footer nav ul {
   animation-delay: .5s;
 }
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes grow {
-  50% {
-    transform: scale(1);
-  }
-}
-
 @media (width >= 43.75rem) {
   .destination {
     padding: 1.625em 0;
@@ -1108,7 +1121,7 @@ footer nav ul {
   background-color: #33333359;
   margin: -1.5em auto 0;
   padding: 1em 1.5em;
-  transition: opacity 2s 1.5s, transform 2s 1.5s;
+  transition: opacity 2s 1s, transform 2s 1s;
   transform: translateX(-40%);
 }
 
@@ -1166,7 +1179,7 @@ footer nav ul {
 
 .popular-tour-wrapper .right-col {
   opacity: 0;
-  transition: opacity 2s 1.5s, transform 2s 1.5s;
+  transition: opacity 2s 1s, transform 2s 1s;
   transform: translateX(40%);
 }
 
@@ -1616,7 +1629,7 @@ footer nav ul {
   opacity: 0;
   visibility: hidden;
   margin-bottom: 1.5em;
-  transition: all 2s .5s;
+  transition: all 2s;
   box-shadow: 0 8px 10px #0003;
 }
 
@@ -1646,15 +1659,15 @@ footer nav ul {
 }
 
 .our-time-wrapper li:first-child {
-  transition-delay: .4s;
+  transition-delay: .3s;
 }
 
 .our-time-wrapper li:nth-child(2) {
-  transition-delay: .8s;
+  transition-delay: .5s;
 }
 
 .our-time-wrapper li:nth-child(3) {
-  transition-delay: 1s;
+  transition-delay: .7s;
 }
 
 .our-time-content {

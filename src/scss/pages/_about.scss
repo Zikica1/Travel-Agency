@@ -252,7 +252,7 @@
   margin-bottom: 1.5em;
   opacity: 0;
   visibility: hidden;
-  transition: all 2s 0.5s ease;
+  transition: all 2s ease;
 
   @include smallSize2 {
     width: 23.125em;
@@ -277,13 +277,13 @@
 }
 
 .our-time-wrapper li:nth-child(1) {
-  transition-delay: 0.4s;
+  transition-delay: 0.3s;
 }
 .our-time-wrapper li:nth-child(2) {
-  transition-delay: 0.8s;
+  transition-delay: 0.5s;
 }
 .our-time-wrapper li:nth-child(3) {
-  transition-delay: 1s;
+  transition-delay: 0.7s;
 }
 
 .our-time-content {

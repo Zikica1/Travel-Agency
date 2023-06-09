@@ -410,19 +410,6 @@
   animation-delay: 0.5s;
 }
 
-/* animation - loader */
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes grow {
-  50% {
-    transform: scale(1);
-  }
-}
-
 /*Destination */
 .destination {
   @include middleSize {
@@ -486,12 +473,6 @@
     width: 30%;
   }
 }
-
-// .destination-wrapper li:hover {
-//   @include middleSize {
-//     transform: scale(1.1);
-//   }
-// }
 
 .destination-wrapper li:hover {
   transform: scale(0.98);
@@ -788,7 +769,7 @@
   backdrop-filter: blur(5px);
   opacity: 0;
   transform: translateX(-40%);
-  transition: opacity 2s 1.5s ease, transform 2s 1.5s ease;
+  transition: opacity 2s 1s ease, transform 2s 1s ease;
 
   @include middleSize {
     width: 100%;
@@ -843,7 +824,7 @@
 .popular-tour-wrapper .right-col {
   opacity: 0;
   transform: translateX(40%);
-  transition: opacity 2s 1.5s ease, transform 2s 1.5s ease;
+  transition: opacity 2s 1s ease, transform 2s 1s ease;
 
   @include smallSize2 {
     width: 23.125em;
