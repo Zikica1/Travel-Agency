@@ -562,6 +562,10 @@ async function load() {
     page.render();
 }
 load();
+//Scroll to down
+window.addEventListener("scroll", ()=>{
+    document.querySelector(".header-sec").classList.toggle("sticky", window.scrollY > 0);
+});
 
 },{"a08375811195c8d1":"hjEBa"}],"hjEBa":[function(require,module,exports) {
 module.exports = require("e43c0c75d5f887c9")(require("cce7a3405ae94d8e").getBundleURL("9pefW") + "global.6c9f5b79.js" + "?" + Date.now()).catch((err)=>{

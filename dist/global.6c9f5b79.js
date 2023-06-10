@@ -571,10 +571,6 @@ function render() {
         document.documentElement.scrollTop = 0;
     });
 }
-//Scroll to down
-window.addEventListener("scroll", ()=>{
-    document.querySelector(".header-sec").classList.toggle("sticky", window.scrollY > 0);
-});
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {

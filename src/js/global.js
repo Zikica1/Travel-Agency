@@ -11,10 +11,3 @@ export function render() {
     document.documentElement.scrollTop = 0;
   });
 }
-
-//Scroll to down
-window.addEventListener('scroll', () => {
-  document
-    .querySelector('.header-sec')
-    .classList.toggle('sticky', window.scrollY > 0);
-});
