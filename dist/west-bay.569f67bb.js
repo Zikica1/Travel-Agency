@@ -566,6 +566,22 @@ load();
 window.addEventListener("scroll", ()=>{
     document.querySelector(".header-sec").classList.toggle("sticky", window.scrollY > 0);
 });
+//Modal
+const thingCard = document.querySelectorAll(".card-m");
+const modalCloseBtn = document.querySelectorAll(".modal-close-btn");
+const modals = document.querySelectorAll(".modal");
+thingCard.forEach((card, i)=>{
+    card.addEventListener("click", ()=>{
+        modals[i].classList.add("active");
+    });
+});
+modalCloseBtn.forEach(function(item) {
+    item.addEventListener("click", ()=>{
+        modals.forEach((item)=>{
+            item.classList.remove("active");
+        });
+    });
+});
 
 },{"a08375811195c8d1":"hjEBa"}],"hjEBa":[function(require,module,exports) {
 module.exports = require("e43c0c75d5f887c9")(require("cce7a3405ae94d8e").getBundleURL("9pefW") + "global.6c9f5b79.js" + "?" + Date.now()).catch((err)=>{

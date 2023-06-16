@@ -108,6 +108,10 @@
   }
 }
 
+.thing-card:hover {
+  cursor: pointer;
+}
+
 .thing-card:last-child {
   margin-bottom: 0;
 }
@@ -233,6 +237,69 @@
   }
 }
 
+/*modal*/
+.modal {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-body {
+  position: relative;
+  color: #333;
+  background: #fff;
+  max-width: 500px;
+  padding: 2em;
+  margin: 5px 1.25em 1.25em;
+  border-radius: 8px;
+  transform: translateY(-50px);
+  transition: 0.5s ease;
+}
+
+.modal.active .modal-body {
+  transform: translateY(0);
+}
+
+.modal-body .modal-close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.375rem;
+  margin: 0.909em;
+  cursor: pointer;
+}
+
+.modal-body h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-block: 1em;
+  line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-body img {
+  border-radius: 8px;
+}
+
+.modal-body p {
+  margin-block: 1em;
+}
+
 /* parks and beaches */
 .parks-beaches-wrapper {
   @include middleSize {
@@ -250,6 +317,10 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+.park-beach:hover {
+  cursor: pointer;
 }
 
 .park-beach::after {
