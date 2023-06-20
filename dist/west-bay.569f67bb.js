@@ -573,12 +573,14 @@ const modals = document.querySelectorAll(".modal");
 thingCard.forEach((card, i)=>{
     card.addEventListener("click", ()=>{
         modals[i].classList.add("active");
+        document.documentElement.style.overflow = "hidden";
     });
 });
 modalCloseBtn.forEach(function(item) {
     item.addEventListener("click", ()=>{
         modals.forEach((item)=>{
             item.classList.remove("active");
+            document.documentElement.style.overflow = "";
         });
     });
 });
