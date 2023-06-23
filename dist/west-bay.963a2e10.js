@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"5ww7e":[function(require,module,exports) {
+})({"fzIu4":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "167346a9ffe3d548";
+module.bundle.HMR_BUNDLE_ID = "b4560dee963a2e10";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -556,46 +556,42 @@ function hmrAccept(bundle, id) {
     });
 }
 
-},{}],"3C9CX":[function(require,module,exports) {
+},{}],"7T8VT":[function(require,module,exports) {
 async function load() {
-    const page = await require("37cd192280d72c31");
+    const page = await require("f48d3a72ce1f0327");
     page.render();
 }
 load();
-const contactTex = document.querySelector(".contact-us-text");
-const contactMap = document.querySelector(".contact-map");
-const contactLeft = document.querySelector(".left-col");
-const contactRight = document.querySelector(".right-col");
-const cards = document.querySelectorAll(".card");
-const observerCo = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        entry.target.classList.toggle("action", entry.isIntersecting);
-        if (entry.isIntersecting) observerCo.unobserve(entry.target);
+//Scroll to down
+window.addEventListener("scroll", ()=>{
+    document.querySelector(".header-sec").classList.toggle("sticky", window.scrollY > 0);
+});
+//Modal
+const thingCard = document.querySelectorAll(".card-m");
+const modalCloseBtn = document.querySelectorAll(".modal-close-btn");
+const modals = document.querySelectorAll(".modal");
+thingCard.forEach((card, i)=>{
+    card.addEventListener("click", ()=>{
+        modals[i].classList.add("active");
+        document.documentElement.style.overflow = "hidden";
     });
 });
-const observerCo2 = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        entry.target.classList.toggle("action", entry.isIntersecting);
-        if (entry.isIntersecting) observerCo2.unobserve(entry.target);
+modalCloseBtn.forEach(function(item) {
+    item.addEventListener("click", ()=>{
+        modals.forEach((item)=>{
+            item.classList.remove("active");
+            document.documentElement.style.overflow = "";
+        });
     });
-}, {
-    threshold: 0.5
-});
-observerCo.observe(contactTex);
-observerCo.observe(contactMap);
-observerCo.observe(contactLeft);
-observerCo.observe(contactRight);
-cards.forEach((card)=>{
-    observerCo2.observe(card);
 });
 
-},{"37cd192280d72c31":"bcVTZ"}],"bcVTZ":[function(require,module,exports) {
-module.exports = require("2d367b69ee4d6b34")(require("9a899399639fe0e5").getBundleURL("1Vv9e") + "global.6c9f5b79.js" + "?" + Date.now()).catch((err)=>{
+},{"f48d3a72ce1f0327":"kEKmx"}],"kEKmx":[function(require,module,exports) {
+module.exports = require("a82153afb511a246")(require("47d476542aedd5c9").getBundleURL("ftVm4") + "global.6c9f5b79.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
 }).then(()=>module.bundle.root("ivXNZ"));
 
-},{"2d367b69ee4d6b34":"61B45","9a899399639fe0e5":"lgJ39"}],"61B45":[function(require,module,exports) {
+},{"a82153afb511a246":"61B45","47d476542aedd5c9":"lgJ39"}],"61B45":[function(require,module,exports) {
 "use strict";
 var cacheLoader = require("c8cfc5c0c465390e");
 module.exports = cacheLoader(function(bundle) {
@@ -691,6 +687,6 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}]},["5ww7e","3C9CX"], "3C9CX", "parcelRequire56b7")
+},{}]},["fzIu4","7T8VT"], "7T8VT", "parcelRequire56b7")
 
-//# sourceMappingURL=contact.ffe3d548.js.map
+//# sourceMappingURL=west-bay.963a2e10.js.map

@@ -1,13 +1,25 @@
 /*smooth transition*/
 @keyframes transitionIn {
-  from {
+  0% {
     opacity: 0;
     // transform: translateY(-10px);
   }
 
-  to {
-    opacity: 1;
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
     // transform: translateY(0);
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

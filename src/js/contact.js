@@ -28,7 +28,6 @@ const observerCo2 = new IntersectionObserver(
   },
   {
     threshold: 0.5,
-    rootMargin: '-30px 0px 0px 0px',
   }
 );
 
@@ -38,5 +37,5 @@ observerCo.observe(contactLeft);
 observerCo.observe(contactRight);
 
 cards.forEach((card) => {
-  observerCo.observe(card);
+  observerCo2.observe(card);
 });
