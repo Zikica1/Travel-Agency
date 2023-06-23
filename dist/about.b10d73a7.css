@@ -830,15 +830,15 @@ footer nav ul {
 
 @media (width >= 43.75rem) {
   .destination-wrapper .destination-1 {
-    transition: opacity 2s .4s, visibility 2s .4s, transform .3s;
+    transition-delay: .2s;
   }
 
   .destination-wrapper .destination-2 {
-    transition: opacity 2s .8s, visibility 2s .8s, transform .3s;
+    transition-delay: .4s;
   }
 
   .destination-wrapper .destination-3 {
-    transition: opacity 2s 1.2s, visibility 2s 1.2s, transform 1.2s;
+    transition-delay: .6s;
   }
 }
 

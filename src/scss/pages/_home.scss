@@ -487,22 +487,39 @@
 
 .destination-wrapper .destination-1 {
   @include middleSize {
-    transition: opacity 2s 0.4s ease, visibility 2s 0.4s ease,
-      transform 0.3s ease;
+    transition-delay: 0.2s;
   }
 }
+
 .destination-wrapper .destination-2 {
   @include middleSize {
-    transition: opacity 2s 0.8s ease, visibility 2s 0.8s ease,
-      transform 0.3s ease;
+    transition-delay: 0.4s;
   }
 }
 .destination-wrapper .destination-3 {
   @include middleSize {
-    transition: opacity 2s 1.2s ease, visibility 2s 1.2s ease,
-      transform 1.2s ease;
+    transition-delay: 0.6s;
   }
 }
+
+// .destination-wrapper .destination-1 {
+//   @include middleSize {
+//     transition: opacity 2s 0.4s ease, visibility 2s 0.4s ease,
+//       transform 0.3s ease;
+//   }
+// }
+// .destination-wrapper .destination-2 {
+//   @include middleSize {
+//     transition: opacity 2s 0.8s ease, visibility 2s 0.8s ease,
+//       transform 0.3s ease;
+//   }
+// }
+// .destination-wrapper .destination-3 {
+//   @include middleSize {
+//     transition: opacity 2s 1.2s ease, visibility 2s 1.2s ease,
+//       transform 1.2s ease;
+//   }
+// }
 
 .destination-wrapper a {
   color: #000;
