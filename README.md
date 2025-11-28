@@ -2,7 +2,7 @@
 
 [👉 Posetite naš zvanični sajt](https://www.webworker.rs)
 
-WebWorker je profesionalna web agencija specijalizovana za razvoj brzih, sigurnih i modernih WordPress i custom web sajtova.  
+WebWorker je profesionalna web agencija specijalizovana za razvoj brzih, sigurnih i modernih custom web sajtova.  
 Pomažemo kompanijama da unaprede online prisustvo i pretvore posetioce u klijente.
 
 ---
